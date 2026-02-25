@@ -88,7 +88,6 @@ export default function Home() {
         {/* Footer */}
         <motion.footer variants={itemVariants} className="text-center py-8 text-gray-400 text-sm">
           <p>© 2026 F1 Data Dashboard | Built with Next.js & ❤️ for F1 fans</p>
-          <p className="mt-2">Data visualization by Aaron Tindall</p>
         </motion.footer>
       </motion.div>
     </main>
