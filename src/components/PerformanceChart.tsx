@@ -35,35 +35,36 @@ export default function PerformanceChart({ bearman, ocon }: PerformanceChartProp
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#38383F" />
+        <CartesianGrid strokeDasharray="3 3" stroke="#E5E5E5" />
         <XAxis 
           dataKey="metric" 
-          stroke="#9CA3AF"
-          style={{ fontSize: '12px' }}
+          stroke="#1A1A1A"
+          style={{ fontSize: '12px', fontWeight: '600' }}
         />
         <YAxis 
-          stroke="#9CA3AF"
-          style={{ fontSize: '12px' }}
+          stroke="#1A1A1A"
+          style={{ fontSize: '12px', fontWeight: '600' }}
         />
         <Tooltip 
           contentStyle={{ 
-            backgroundColor: '#15151E', 
-            border: '1px solid #E10600',
-            borderRadius: '8px'
+            backgroundColor: '#FFFFFF', 
+            border: '2px solid #E10600',
+            borderRadius: '8px',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
           }}
-          labelStyle={{ color: '#fff' }}
+          labelStyle={{ color: '#1A1A1A', fontWeight: 'bold' }}
         />
         <Legend 
-          wrapperStyle={{ paddingTop: '20px' }}
+          wrapperStyle={{ paddingTop: '20px', fontWeight: '600' }}
         />
         <Bar 
           dataKey="Bearman" 
-          fill="#B6BABD" 
+          fill="#1A1A1A" 
           radius={[8, 8, 0, 0]}
         />
         <Bar 
           dataKey="Ocon" 
-          fill="#FF87BC" 
+          fill="#E10600" 
           radius={[8, 8, 0, 0]}
         />
       </BarChart>

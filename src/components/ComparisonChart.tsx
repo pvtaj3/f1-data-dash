@@ -18,45 +18,46 @@ export default function ComparisonChart({ bearman, ocon }: ComparisonChartProps)
   return (
     <ResponsiveContainer width="100%" height={300}>
       <LineChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#38383F" />
+        <CartesianGrid strokeDasharray="3 3" stroke="#E5E5E5" />
         <XAxis 
           dataKey="lap" 
-          stroke="#9CA3AF"
-          style={{ fontSize: '12px' }}
+          stroke="#1A1A1A"
+          style={{ fontSize: '12px', fontWeight: '600' }}
         />
         <YAxis 
-          stroke="#9CA3AF"
-          style={{ fontSize: '12px' }}
+          stroke="#1A1A1A"
+          style={{ fontSize: '12px', fontWeight: '600' }}
           domain={['auto', 'auto']}
         />
         <Tooltip 
           contentStyle={{ 
-            backgroundColor: '#15151E', 
-            border: '1px solid #E10600',
-            borderRadius: '8px'
+            backgroundColor: '#FFFFFF', 
+            border: '2px solid #E10600',
+            borderRadius: '8px',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
           }}
-          labelStyle={{ color: '#fff' }}
+          labelStyle={{ color: '#1A1A1A', fontWeight: 'bold' }}
         />
         <Legend 
-          wrapperStyle={{ paddingTop: '20px' }}
+          wrapperStyle={{ paddingTop: '20px', fontWeight: '600' }}
           iconType="line"
         />
         <Line 
           type="monotone" 
           dataKey="bearman" 
-          stroke="#B6BABD" 
+          stroke="#1A1A1A" 
           strokeWidth={3}
           name="Bearman"
-          dot={{ fill: '#B6BABD', r: 4 }}
+          dot={{ fill: '#1A1A1A', r: 4 }}
           activeDot={{ r: 6 }}
         />
         <Line 
           type="monotone" 
           dataKey="ocon" 
-          stroke="#FF87BC" 
+          stroke="#E10600" 
           strokeWidth={3}
           name="Ocon"
-          dot={{ fill: '#FF87BC', r: 4 }}
+          dot={{ fill: '#E10600', r: 4 }}
           activeDot={{ r: 6 }}
         />
       </LineChart>

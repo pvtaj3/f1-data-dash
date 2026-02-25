@@ -29,19 +29,19 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-f1-dark via-f1-gray to-f1-dark">
+    <main className="min-h-screen bg-gradient-to-br from-white via-f1-gray to-white">
       {/* Header */}
       <motion.header 
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="bg-f1-dark/80 backdrop-blur-sm border-b border-f1-red/30 sticky top-0 z-50"
+        className="bg-white/95 backdrop-blur-sm border-b-4 border-f1-red sticky top-0 z-50 shadow-md"
       >
         <div className="container mx-auto px-4 py-6">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
             <span className="text-gradient">F1 DATA DASHBOARD</span>
           </h1>
-          <p className="text-center text-gray-400 mt-2 text-sm md:text-base">
+          <p className="text-center text-gray-600 mt-2 text-sm md:text-base font-semibold">
             Bearman vs Ocon - 2025 Season Analysis
           </p>
         </div>
@@ -67,11 +67,11 @@ export default function Home() {
 
         {/* Performance Charts */}
         <motion.section variants={itemVariants} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="card-gradient rounded-xl p-6 border border-f1-red/20 shadow-xl">
+          <div className="card-light rounded-xl p-6 card-hover">
             <h2 className="text-2xl font-bold mb-4 text-f1-red">Lap Time Comparison</h2>
             <ComparisonChart bearman={bearmanData} ocon={oconData} />
           </div>
-          <div className="card-gradient rounded-xl p-6 border border-f1-red/20 shadow-xl">
+          <div className="card-light rounded-xl p-6 card-hover">
             <h2 className="text-2xl font-bold mb-4 text-f1-red">Race Performance</h2>
             <PerformanceChart bearman={bearmanData} ocon={oconData} />
           </div>
@@ -79,14 +79,14 @@ export default function Home() {
 
         {/* Sector Analysis */}
         <motion.section variants={itemVariants}>
-          <div className="card-gradient rounded-xl p-6 border border-f1-red/20 shadow-xl">
+          <div className="card-light rounded-xl p-6 card-hover">
             <h2 className="text-2xl font-bold mb-4 text-f1-red">Sector Analysis</h2>
             <SectorAnalysis bearman={bearmanData} ocon={oconData} />
           </div>
         </motion.section>
 
         {/* Footer */}
-        <motion.footer variants={itemVariants} className="text-center py-8 text-gray-400 text-sm">
+        <motion.footer variants={itemVariants} className="text-center py-8 text-gray-600 text-sm border-t border-f1-border mt-12">
           <p>© 2026 F1 Data Dashboard | Built with Next.js & ❤️ for F1 fans</p>
         </motion.footer>
       </motion.div>

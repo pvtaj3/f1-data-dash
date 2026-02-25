@@ -38,7 +38,7 @@ export default function StatsGrid({ bearman, ocon }: StatsGridProps) {
   ]
 
   return (
-    <div className="card-gradient rounded-xl p-6 border border-f1-red/20 shadow-xl">
+    <div className="card-light rounded-xl p-6 card-hover">
       <h2 className="text-2xl font-bold mb-6 text-f1-red">Head-to-Head Statistics</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, index) => {
@@ -52,36 +52,36 @@ export default function StatsGrid({ bearman, ocon }: StatsGridProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-f1-dark/50 rounded-lg p-4 hover:bg-f1-dark/70 transition-colors"
+              className="bg-f1-gray rounded-lg p-4 border border-f1-border hover:border-f1-red hover:shadow-lg transition-all duration-300"
             >
-              <div className="text-gray-400 text-xs uppercase tracking-wide mb-3">
+              <div className="text-gray-600 text-xs uppercase tracking-wide mb-3 font-bold">
                 {stat.label}
               </div>
               <div className="flex justify-between items-center mb-2">
                 <div className="text-left">
-                  <div className={`text-sm font-semibold ${bearmanWins ? 'text-green-400' : 'text-white'}`}>
+                  <div className={`text-sm font-bold ${bearmanWins ? 'text-green-600' : 'text-f1-dark'}`}>
                     Bearman
                   </div>
-                  <div className={`text-lg font-bold ${bearmanWins ? 'text-green-400' : 'text-white'}`}>
+                  <div className={`text-lg font-bold ${bearmanWins ? 'text-green-600' : 'text-f1-dark'}`}>
                     {stat.format(stat.bearman)}
                   </div>
                 </div>
-                <div className="text-gray-600 text-2xl font-bold">VS</div>
+                <div className="text-gray-400 text-2xl font-bold">VS</div>
                 <div className="text-right">
-                  <div className={`text-sm font-semibold ${!bearmanWins ? 'text-green-400' : 'text-white'}`}>
+                  <div className={`text-sm font-bold ${!bearmanWins ? 'text-green-600' : 'text-f1-dark'}`}>
                     Ocon
                   </div>
-                  <div className={`text-lg font-bold ${!bearmanWins ? 'text-green-400' : 'text-white'}`}>
+                  <div className={`text-lg font-bold ${!bearmanWins ? 'text-green-600' : 'text-f1-dark'}`}>
                     {stat.format(stat.ocon)}
                   </div>
                 </div>
               </div>
               {bearmanWins ? (
-                <div className="text-xs text-center text-green-400 mt-2">
+                <div className="text-xs text-center text-green-600 mt-2 font-bold">
                   ✓ Bearman leads
                 </div>
               ) : (
-                <div className="text-xs text-center text-green-400 mt-2">
+                <div className="text-xs text-center text-green-600 mt-2 font-bold">
                   ✓ Ocon leads
                 </div>
               )}

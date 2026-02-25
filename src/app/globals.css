@@ -11,32 +11,38 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-f1-red to-red-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-f1-red to-red-700 bg-clip-text text-transparent;
   }
   
-  .card-gradient {
-    @apply bg-gradient-to-br from-f1-gray to-f1-dark;
+  .card-light {
+    @apply bg-white border border-f1-border shadow-lg;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-xl hover:border-f1-red/30 transition-all duration-300;
   }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #15151E;
+  background: #F5F5F5;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #E10600;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c00500;
+  background: #C00500;
 }

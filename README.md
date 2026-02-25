@@ -5,12 +5,12 @@ A modern, interactive Formula 1 data visualization dashboard built with Next.js,
 ## ✨ Features
 
 - 📊 **Interactive Charts**: Dynamic visualizations using Recharts
-- 🎨 **F1 Styling**: Authentic Formula 1 brand colors and design
+- 🎨 **F1 Styling**: Haas F1 team colors - clean white and red design
 - 📱 **Mobile Responsive**: Fully optimized for all screen sizes
 - ⚡ **Performance Metrics**: Lap times, sector analysis, and qualifying data
 - 🏆 **Driver Comparison**: Side-by-side stats for Bearman and Ocon
 - 🎭 **Smooth Animations**: Powered by Framer Motion
-- 🌙 **Dark Theme**: F1-inspired dark interface
+- ☀️ **Light Theme**: Clean, crisp light interface with Haas colors
 
 ## 🚀 Getting Started
 
@@ -89,7 +89,8 @@ Colors and themes can be customized in `tailwind.config.js`:
 ```javascript
 colors: {
   'f1-red': '#E10600',
-  'f1-dark': '#15151E',
+  'haas-white': '#FFFFFF',
+  'haas-gray': '#B6BABD',
   // Add more team colors
 }
 ```

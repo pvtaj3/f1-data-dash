@@ -9,10 +9,14 @@ module.exports = {
     extend: {
       colors: {
         'f1-red': '#E10600',
-        'f1-dark': '#15151E',
-        'f1-gray': '#38383F',
-        'haas-red': '#B6BABD',
+        'f1-light': '#FFFFFF',
+        'f1-gray': '#F5F5F5',
+        'f1-dark': '#1A1A1A',
+        'f1-border': '#E5E5E5',
+        'haas-red': '#E10600',
         'haas-white': '#FFFFFF',
+        'haas-gray': '#B6BABD',
+        'haas-dark': '#1A1A1A',
         'alpine-pink': '#FF87BC',
         'alpine-blue': '#0093CC',
       },
