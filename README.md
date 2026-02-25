@@ -109,10 +109,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 MIT License - feel free to use this project for personal or commercial purposes.
 
-## 👨‍💻 Author
-
-**Aaron Tindall**
-
 ## 🙏 Acknowledgments
 
 - Formula 1® for inspiration
